@@ -2,21 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>For My Love ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 10;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 90%;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Pulsing Heart Animation */
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+            margin: 0 auto 20px auto;
+            animation: pulse 1.2s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 52px;
+            height: 80px;
+            border-radius: 50px 50px 0 0;
+            background: #ff2a5f;
+        }
+
+        .heart::before {
+            left: 52px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #fffaf0;
+        }
+
+        .signature {
+            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffe6eb;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Floating background elements */
+        .floating-hearts span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            bottom: -20px;
+            animation: floatUp 6s linear infinite;
+            transform: rotate(45deg);
+        }
+
+        .floating-hearts span::before,
+        .floating-hearts span::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+        }
+
+        .floating-hearts span::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .floating-hearts span::after {
+            top: 0;
+            left: -10px;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(45deg) scale(0.6);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(45deg) scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <P>HELLO FROM EC2</P>
-    <p> Aditya Kumar</p>
+
+    <!-- Background Floating Hearts -->
+    <div class="floating-hearts">
+        <span style="left: 10%; animation-duration: 5s; animation-delay: 0s;"></span>
+        <span style="left: 25%; animation-duration: 7s; animation-delay: 2s;"></span>
+        <span style="left: 40%; animation-duration: 4s; animation-delay: 1s;"></span>
+        <span style="left: 60%; animation-duration: 6s; animation-delay: 3s;"></span>
+        <span style="left: 75%; animation-duration: 5s; animation-delay: 1.5s;"></span>
+        <span style="left: 90%; animation-duration: 8s; animation-delay: 4s;"></span>
+    </div>
+
+    <div class="container">
+        <div class="heart"></div>
+        <h1>To My Dearest Chummuuu</h1>
+        <p>Every single moment with you feels like magic. Thank you for bringing so much brightness, love, and joy into my world. You mean everything to me. ❤️</p>
+        <div class="signature">Forever Yours,<br>Muchuu</div>
+    </div>
+
 </body>
-<style>
-    body{
-        background-color: aqua;
-        text-align: center;
-        font-size: 50px;
-        font-family: sans-serif;
-        color: yellow;
-    }
-</style>
 </html>
